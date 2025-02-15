@@ -1,0 +1,8 @@
+[user]
+	name = XodTech
+	email = 82662318+XodTech@users.noreply.github.com
+[init]
+	defaultBranch = main
+[core]
+	editor = nvim
+	excludesfile = /home/user/.gitignore

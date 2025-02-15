@@ -1,0 +1,16 @@
+.config/zsh/zinit
+.config/zsh/plugins
+.config/zsh/zsh_history
+.config/btop
+.config/mpv
+# .config/nitrogen/bg-saved.cfg
+.config/pulse
+.config/ranger
+.config/vlc
+.config/xarchiver
+.config/xfce4
+.config/zathura
+.config/gtk-*
+.config/libvirt
+.config/mpv
+.config/pavucontrol.ini
