@@ -79,6 +79,7 @@ bindkey -e
 # bindkey '^j' history-search-backward
 # bindkey '^k' history-search-forward
 # bindkey '^e' 'ranger .'
+
 # History
 HISTSIZE=1000
 HISTFILE=~/.config/zsh/zsh_history
@@ -98,10 +99,11 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
-
-#alias ls='ls --color'
 alias ls="lsd --tree --depth=1"
 alias nv='nvim'
+
 # Shell integrations
 eval "$(fzf --zsh)"
+
 #export EDITOR=nvim
+alias gl="gitlicense" 

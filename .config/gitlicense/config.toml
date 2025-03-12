@@ -1,0 +1,12 @@
+[User]
+Name = "XodTech"
+
+[Paths]
+TargetLicenseFilename = "LICENSE"
+LicensesPath = "./licenses"
+
+[Settings]
+SetUsername = true
+SetDate = true
+SetCustomMessage = true
+AlwaysOverwrite = true

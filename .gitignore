@@ -14,3 +14,5 @@
 .config/libvirt
 .config/mpv
 .config/pavucontrol.ini
+.config/QtProject.conf
+.config/dconf
