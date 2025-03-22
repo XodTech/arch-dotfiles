@@ -14,6 +14,9 @@ require'nvim-treesitter.configs'.setup {
     "go",
     "rust",
     "markdown",
+--  "just"
+--  "toml"
+--  "yaml"
 	},
 
   sync_install = false,

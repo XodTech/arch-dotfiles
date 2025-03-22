@@ -106,4 +106,5 @@ alias nv='nvim'
 eval "$(fzf --zsh)"
 
 #export EDITOR=nvim
-alias gl="gitlicense" 
+alias gl="gitlicense"
+alias glog="git log --pretty=format:'%h - %an, %ar : %s'"

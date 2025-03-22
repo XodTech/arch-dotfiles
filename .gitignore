@@ -16,3 +16,4 @@
 .config/pavucontrol.ini
 .config/QtProject.conf
 .config/dconf
+.config/zellij/config.kdl.*

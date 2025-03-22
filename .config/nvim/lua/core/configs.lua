@@ -51,4 +51,6 @@ vim.opt.fillchars = {
     foldsep = "│",
     foldclose = "▸"
 }
+-- Disable swapfile
+vim.opt.swapfile = false
 
