@@ -57,7 +57,6 @@ function SetColor()
     -- Option 3 Fully transparent background
 --    vim.api.nvim_set_hl(0, "PopMenu", { bg = "#1F2335", blend = 0 })
 --    vim.api.nvim_set_hl(0, "Normal", {guibg=NONE, ctermbg=NONE})
-    
 end
 
 SetColor()
