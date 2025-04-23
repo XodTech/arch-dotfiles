@@ -19,6 +19,7 @@ application/x-extension-xht=firefox.desktop
 font/woff2=org.gnome.font-viewer.desktop
 x-scheme-handler/logseq=Logseq.desktop
 text/plain=gedit.desktop
+inode/symlink=Alacritty.desktop
 
 [Added Associations]
 inode/directory=xfce4-file-manager.desktop;
@@ -44,3 +45,4 @@ audio/x-wav=vlc.desktop;
 audio/mpeg=mpv.desktop;vlc.desktop;
 text/csv=libreoffice-calc.desktop;
 text/markdown=micro.desktop;org.gnome.gedit.desktop;
+inode/symlink=Alacritty.desktop;

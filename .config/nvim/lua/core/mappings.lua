@@ -21,7 +21,6 @@ vim.keymap.set('n','<C-q>','<cmd> q <CR>',params)
 vim.keymap.set('n','<C-b>','<cmd> bd <CR>',params)
 vim.keymap.set('n','<C-s>','<cmd> w <CR>',params)
 -- delete single character without copying into register
-vim.keymap.set('n', 'x', '"_x', params)
 vim.keymap.set('n', 'd', '"_d', params)
 vim.keymap.set('n', 'dd', '"_dd', params)
 vim.keymap.set('n', 'r', '"_r', params)

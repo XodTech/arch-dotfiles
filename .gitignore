@@ -17,3 +17,8 @@
 .config/QtProject.conf
 .config/dconf
 .config/zellij/config.kdl.*
+.config/Thunar/
+.config/libreoffice
+.config/xsettingsd
+.config/gedit
+.config/GIMP
