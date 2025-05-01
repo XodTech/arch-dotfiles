@@ -98,6 +98,8 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
+
+export EDITOR=nvim
 # Aliases
 alias ls="lsd --tree --depth=1"
 alias nv='nvim'
@@ -105,7 +107,6 @@ alias nv='nvim'
 # Shell integrations
 eval "$(fzf --zsh)"
 
-export EDITOR=nvim
 alias gl="gitlicense"
 alias glog="git log --pretty=format:'%h - %an, %ar : %s'"
 alias cd="z"
@@ -113,24 +114,12 @@ alias cd="z"
 #Zoxide
 eval "$(zoxide init zsh)"
 
-#Superfile
-spf() {
-    os=$(uname -s)
-
-    # Linux
-    if [[ "$os" == "Linux" ]]; then
-        export SPF_LAST_DIR="${XDG_STATE_HOME:-$HOME/.local/state}/superfile/lastdir"
-    fi
-
-    # macOS
-    if [[ "$os" == "Darwin" ]]; then
-        export SPF_LAST_DIR="$HOME/Library/Application Support/superfile/lastdir"
-    fi
-
-    command spf "$@"
-
-    [ ! -f "$SPF_LAST_DIR" ] || {
-        . "$SPF_LAST_DIR"
-        rm -f -- "$SPF_LAST_DIR" > /dev/null
-    }
+#Yazi
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
 }
