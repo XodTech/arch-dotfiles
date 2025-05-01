@@ -18,7 +18,7 @@ application/x-extension-xhtml=firefox.desktop
 application/x-extension-xht=firefox.desktop
 font/woff2=org.gnome.font-viewer.desktop
 x-scheme-handler/logseq=Logseq.desktop
-text/plain=gedit.desktop
+text/plain=nvim.desktop
 inode/symlink=Alacritty.desktop
 
 [Added Associations]
