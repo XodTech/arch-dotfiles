@@ -7,6 +7,7 @@ stow . # Run this command inside cloned repository
 ```
 ### ❤️ Special thanks to these people:
 
+- #### [Gaurav Bankar](https://github.com/gaurav23b)
 - #### [Zproger](https://github.com/Zproger)
 - #### [AlariCode](https://github.com/AlariCode/)
 - #### [hendrikmi](https://github.com/hendrikmi/)
