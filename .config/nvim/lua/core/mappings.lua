@@ -3,7 +3,9 @@ local params = {noremap = true,silent = true}
 
 --Custom
 vim.keymap.set('n','<leader>tn',':tabedit ~/Notes <CR>',params)
+
 --Basic
+
 -- Disable the spacebar key's default behavior in Normal and Visual modes
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
@@ -20,10 +22,12 @@ vim.keymap.set('i','kj','<Esc>',params)
 vim.keymap.set('n','<C-q>','<cmd> q <CR>',params)
 vim.keymap.set('n','<C-b>','<cmd> bd <CR>',params)
 vim.keymap.set('n','<C-s>','<cmd> w <CR>',params)
+
 -- delete single character without copying into register
 vim.keymap.set('n', 'd', '"_d', params)
 vim.keymap.set('n', 'dd', '"_dd', params)
 vim.keymap.set('n', 'r', '"_r', params)
+
 -- NeoTree
 vim.keymap.set('n', '<leader>E', ':Neotree float reveal<CR>',params)
 vim.keymap.set('n', '<leader>e', ':Neotree left reveal<CR>',params)
