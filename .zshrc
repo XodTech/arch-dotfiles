@@ -66,7 +66,13 @@ preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for eac
 # Keybindings
 bindkey '^j' history-search-backward
 bindkey '^k' history-search-forward
-bindkey '^e' 'y .'
+
+function zle_run_yazi {
+    y .
+    zle accept-line
+}
+zle -N zle_run_yazi
+bindkey '^e' zle_run_yazi
 
 # History
 HISTSIZE=1000
