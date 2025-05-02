@@ -108,3 +108,6 @@ alias nv='nvim'
 alias gl="gitlicense"
 alias glog="git log --pretty=format:'%h - %an, %ar : %s'"
 alias cd="z"
+
+#Init script
+sh bin/fetch
