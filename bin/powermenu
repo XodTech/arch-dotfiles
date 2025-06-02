@@ -2,7 +2,7 @@
 
 choice=$(printf "Lock\nLogout\nSuspend\nReboot\nShutdown" | rofi -dmenu -p "Powermenu")
 case "$choice" in
-  Lock) sh $HOME/bin/screen-lock ;;
+  Lock) hyprlock ;;
   Logout) pkill -KILL -u "$USER" ;;
   Suspend) systemctl suspend && sh $HOME/bin/screen-lock ;;
   Reboot) systemctl reboot ;;
