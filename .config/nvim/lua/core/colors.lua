@@ -34,29 +34,11 @@ require("catppuccin").setup({
     custom_highlights = {},
     default_integrations = true,
     integrations = {
-        cmp = true,
         gitsigns = true,
-        nvimtree = true,
+        blink_cmp = true,
         treesitter = true,
         notify = false,
-        mini = {
-            enabled = true,
-            indentscope_color = "",
-        },
         -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
     },
 })
-function SetColor()
-	-- Option 1
-	--vim.o.background = "dark"
-	--vim.cmd([[colorscheme gruvbox]])	
-
-	-- Option 2
-	vim.cmd.colorscheme "catppuccin"
-    
-    -- Option 3 Fully transparent background
---    vim.api.nvim_set_hl(0, "PopMenu", { bg = "#1F2335", blend = 0 })
---    vim.api.nvim_set_hl(0, "Normal", {guibg=NONE, ctermbg=NONE})
-end
-
-SetColor()
+vim.cmd.colorscheme "catppuccin-mocha"

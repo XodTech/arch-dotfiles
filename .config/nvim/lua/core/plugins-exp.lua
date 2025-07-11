@@ -22,32 +22,36 @@ require("lazy").setup({
     },
     {
         'nvim-treesitter/nvim-treesitter',
-        run = ":TSUpdaTE"
+        run = ":TSUpdaTE",
+        event = "BufReadPost"
     },
-    {"akinsho/bufferline.nvim", dependencies = {'nvim-tree/nvim-web-devicons'}},
+    {"akinsho/bufferline.nvim", dependencies = {'nvim-tree/nvim-web-devicons'},event = "BufReadPost"},
     {
         'nvim-lualine/lualine.nvim',
-        dependencies = { 'nvim-tree/nvim-web-devicons' }
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
+        event = "BufEnter"
     },
     {
         'nvim-telescope/telescope.nvim', tag = '0.1.8',
         -- or                              , branch = '0.1.x',
-        dependencies = { 'nvim-lua/plenary.nvim' }
+        dependencies = { 'nvim-lua/plenary.nvim' },
+        event = "VeryLazy"
     },
     {"catppuccin/nvim", name = "catppuccin", priority = 1000 },
-    {'neovim/nvim-lspconfig'},
+    {'neovim/nvim-lspconfig',event = "LspAttach"},
     {
-        'windwp/nvim-autopairs', -- Consider deleting
+        'windwp/nvim-autopairs',
         event = "InsertEnter",
         config = true
         -- use opts = {} for passing setup options
         -- this is equivalent to setup({}) function
     },
-    {'windwp/nvim-ts-autotag'},
-    {'lewis6991/gitsigns.nvim'},
+    {'windwp/nvim-ts-autotag',event = "BufReadPost"},
+    {'lewis6991/gitsigns.nvim',event = "BufReadPost"},
     {
         "folke/todo-comments.nvim",
         dependencies = { "nvim-lua/plenary.nvim" },
+        event = "BufReadPost",
         opts = {
             -- your configuration comes here
             -- or leave it empty to use the default settings
@@ -61,15 +65,16 @@ require("lazy").setup({
     config = function()
         require('crates').setup(opts)
         crates.show()
+        --Maybe later add crate autocompletion with cmp
     end,
 },]]--
-    { "norcalli/nvim-colorizer.lua" },
+    { "norcalli/nvim-colorizer.lua",event = "BufReadPost" },
     {
         dir = '~/.config/nvim/local_plugins/render-markdown',
         ft = {"markdown"},
     },
     {
-        "folke/noice.nvim", -- Consider deleting this
+        "folke/noice.nvim",
         event = "VeryLazy",
         opts = {
             -- add any options here
@@ -83,31 +88,9 @@ require("lazy").setup({
             "rcarriga/nvim-notify",
         }
     },
-    {
-        "saghen/blink.cmp",
-        -- optional: provides snippets for the snippet source
-        -- dependencies = { 'rafamadriz/friendly-snippets' },
-
-        -- use a release tag to download pre-built binaries
-        version = "1.*",
-        -- AND/OR build from source, requires nightly: https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust
-        -- build = 'cargo build --release',
-        -- If you use nix, you can build from source using latest nightly rust with:
-        -- build = 'nix run .#build-plugin',
-
-        ---@module 'blink.cmp'
-        ---@type blink.cmp.Config
-        opts = require("plugins.coding.blink_opts").opts,
-        opts_extend = { "sources.default" }
-    },
-    {
-        "kylechui/nvim-surround",
-        version = "^3.0.0", -- Use for stability; omit to use `main` branch for the latest features
-        event = "VeryLazy",
-        config = function()
-            require("nvim-surround").setup({
-                -- Configuration here, or leave empty to use defaults
-            })
-        end
-    }
+    {"hrsh7th/cmp-nvim-lsp",event = "LspAttach"},
+    {"hrsh7th/cmp-buffer",event = "BufEnter"},
+    {"hrsh7th/cmp-path",event = "BufEnter"},
+    {"hrsh7th/cmp-cmdline",event = "CmdlineEnter"},
+    {"hrsh7th/nvim-cmp"},
 })

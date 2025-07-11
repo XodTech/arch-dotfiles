@@ -54,3 +54,7 @@ vim.opt.fillchars = {
 -- Disable swapfile
 vim.opt.swapfile = false
 
+--Cursorline config
+vim.opt.cursorline = true
+vim.opt.cursorlineopt = "number"
+

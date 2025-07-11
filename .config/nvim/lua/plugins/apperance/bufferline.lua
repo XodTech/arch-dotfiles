@@ -1,10 +1,9 @@
-
-require('bufferline').setup {
-      options = {
-        mode = 'buffers', -- set to "tabs" to only show tabpages instead
+require("bufferline").setup({
+    options = {
+        mode = "buffers", -- set to "tabs" to only show tabpages instead
         themable = true, -- allows highlight groups to be overriden i.e. sets highlights as default
-        numbers = 'none', -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
-        close_command = 'Bdelete! %d', -- can be a string | function, see "Mouse actions"
+        numbers = "none", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
+        close_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
         buffer_close_icon = '✗',
         close_icon = '✗',
         path_components = 1, -- Show only the file name without the directory
@@ -26,27 +25,27 @@ require('bufferline').setup {
         always_show_bufferline = true,
         show_tab_indicators = false,
         indicator = {
-          -- icon = '▎', -- this should be omitted if indicator style is not 'icon'
-          style = 'none', -- Options: 'icon', 'underline', 'none'
+            -- icon = '▎', -- this should be omitted if indicator style is not 'icon'
+            style = "none", -- Options: 'icon', 'underline', 'none'
         },
         icon_pinned = '󰐃',
         minimum_padding = 1,
         maximum_padding = 5,
         maximum_length = 15,
-        sort_by = 'insert_at_end',
-      },
-      highlights = {
+        sort_by = "insert_at_end",
+    },
+    highlights = {
         separator = {
-          fg = '#434C5E',
+            fg = "#434C5E",
         },
         buffer_selected = {
-          bold = true,
-          italic = false,
+            bold = true,
+            italic = false,
         },
         -- separator_selected = {},
         -- tab_selected = {},
         -- background = {},
         -- indicator_selected = {},
         -- fill = {},
-      },
-    }
+    },
+})
